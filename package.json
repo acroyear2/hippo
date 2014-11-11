@@ -1,0 +1,23 @@
+{
+  "name": "hippo",
+  "version": "0.1.0",
+	"keywords": ["hyperquest", "gzip", "deflate", "stream"],
+  "description": "A tiny wrapper around [hyperquest](https://github.com/substack/hyperquest) that adds support for gzip & deflate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tetsuo/hippo.git"
+  },
+  "author": "Onur Gunduz <ogunduz@gmail.com> (http://onurgunduz.com/)",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  },
+  "dependencies": {
+    "duplexer": "^0.1.1",
+    "hyperquest": "^1.0.1",
+    "through2": "^0.6.3"
+  }
+}
