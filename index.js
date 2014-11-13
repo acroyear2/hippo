@@ -5,14 +5,19 @@ var duplexer = require('duplexer');
 var hyperquest = require('hyperquest');
 var zlib = require('zlib');
 var through = require('through2');
+var extend = require('util')._extend;
 
 var headers = {
-  'content-type': 'application/json',
   'accept-encoding': 'gzip,deflate'
 };
 
 function request (opts) {
-  opts.headers = headers;
+	opts || (opts={});
+	if (!opts.hasOwnProperty('headers'))
+		opts.headers = headers;
+	else
+		extend(opts.headers, headers);
+
   var method = opts.method || 'get';
   var rs = through();
   var ws = hyperquest(opts, function (err, res) {
