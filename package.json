@@ -1,6 +1,6 @@
 {
   "name": "hippo",
-  "version": "0.1.0",
+  "version": "0.1.1",
 	"keywords": ["hyperquest", "gzip", "deflate", "stream"],
   "description": "A tiny wrapper around [hyperquest](https://github.com/substack/hyperquest) that adds support for gzip & deflate.",
   "main": "index.js",
